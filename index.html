@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOOK for Stablecoins</title>
+  <title>TOOK for stablecoins</title>
   <style>
-    /* 기본 스타일 */
+    /* 기본 리셋 */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       width: 100%;
       height: 100%;
       font-family: Arial, sans-serif;
@@ -20,17 +20,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      position: relative;
       overflow: hidden;
+      position: relative;
     }
 
     /* 배경 이미지 */
     .background-image {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      position: relative; /* 로고 배치 기준 */
       max-width: 90%;
       max-height: 80%;
       object-fit: contain;
@@ -38,33 +34,10 @@
     }
 
     /* 로고 */
-    .logo {
+    .logo-container {
       position: absolute;
-      bottom: 5%; /* 하단에서 5% 띄움 */
-      left: 50%;
-      transform: translateX(-50%);
-      max-width: 30%;
-      height: auto;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      pointer-events: none; /* 로고 클릭 방지 */
       z-index: 2;
-    }
-
-    /* 반응형 */
-    @media (max-width: 768px) {
-      .background-image {
-        max-width: 95%;
-        max-height: 60%;
-      }
-      .logo {
-        max-width: 40%;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- 배경 이미지 -->
-  <img src="images/web_bg.png" alt="Landing Image" class="background-image">
-
-  <!-- 하단 로고 -->
-  <img src="images/Logo.png" alt="Logo" class="logo">
-</body>
-</html>
