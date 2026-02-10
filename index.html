@@ -4,40 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TOOK for stablecoins</title>
+
+  <!-- Favicon & 홈 화면 아이콘 -->
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180x180.png">
+  <link rel="icon" sizes="192x192" href="images/favicon-192x192.png">
+
+  <!-- 기존 랜딩 페이지 스타일 -->
   <style>
-    /* 기본 리셋 */
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      width: 100%;
-      height: 100%;
-      font-family: Arial, sans-serif;
-      background-color: #122F2E; /* 배경색 */
+      background-color: #122F2E;
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
-      position: relative;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: #fff;
     }
 
-    /* 배경 이미지 */
-    .background-image {
-      position: relative; /* 로고 배치 기준 */
-      max-width: 90%;
-      max-height: 80%;
-      object-fit: contain;
-      z-index: 1;
+    img.background {
+      max-width: 80%;
+      height: auto;
     }
 
-    /* 로고 */
-    .logo-container {
+    /* 로고 하단 배치 */
+    img.logo {
       position: absolute;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      pointer-events: none; /* 로고 클릭 방지 */
-      z-index: 2;
+      bottom: 20px; /* 기존 버전 기준 */
+      max-width: 150px;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      img.background {
+        max-width: 90%;
+      }
+      img.logo {
+        max-width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 기존 랜딩 페이지 내용 -->
+  <img src="images/web_bg.png" alt="Background" class="background">
+  <img src="images/Logo.png" alt="Logo" class="logo">
+</body>
+</html>
